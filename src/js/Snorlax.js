@@ -104,6 +104,7 @@ console.log(info.moves)
 // specialAttack, specialDefense y speed. Ingresa los valores que se indican en JSON
 // referente a estos nombres. Tras ello ingresalo en info -> stats sustituyendo al array
 // vacio
+
 const stats = {
   hp: data.stats[0].base_stat,
   attack: data.stats[1].base_stat,
@@ -117,6 +118,7 @@ info.stats = stats
 // 10. Dentro de stats convierte el objeto en un array,
 // aplanalo y elimina los strings El resultado te tiene que quedar
 // los valores numericos de las stats
+
 const objeto = []
 
 for (let i = 0; i < data.stats.length; i++) {

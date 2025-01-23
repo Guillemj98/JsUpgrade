@@ -25,6 +25,19 @@ const data = JSON.parse(dataJson)
 // Esta función debe recorrer el array game_indices del archivo JSON,
 // obtener los nombres de las versiones del juego y pasarlos al callback,
 // que debe imprimirlos en la consola como un array.
+const getGameNames = (callback) => {
+  const array = []
+  for (let i = 0; i < data.game_inidices.length; i++) {
+    array.push(data.game_inidices[i].version.name)
+  }
+  callback(array)
+}
+
+const printGameNames = (array) => {
+  console.log(array)
+}
+
+getGameNames(printGameNames)
 
 // 3. Arrow Function para calcular la altura (Revisar Tema 3.5 Pagina 11)
 

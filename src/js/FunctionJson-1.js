@@ -2,7 +2,7 @@ import { readFileSync } from 'fs'
 
 // NOTA: Cargar el fichero snorlax.json
 
-const dataJson = readFileSync('C:/Users/GuillermoMagroJaén/Desktop/JsUpgrade/src/js/snorlax.json', 'utf8')
+const dataJson = readFileSync('../JsUpgrade/src/js/snorlax.json', 'utf8')
 const data = JSON.parse(dataJson)
 
 // 1. IIFE para mostrar habilidades (Revisar Tema 3.5 Pagina 6)

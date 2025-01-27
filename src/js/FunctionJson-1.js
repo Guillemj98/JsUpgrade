@@ -15,8 +15,9 @@ const data = JSON.parse(dataJson)
   const array = []
   for (let i = 0; i < data.abilities.length; i++) {
     array.push(data.abilities[i].ability.name)
-    console.log(array)
+    
   }
+  console.log(array)
 })()
 
 // 2. Callback para mostrar nombres de juegos (Revisar Tema 3.5 Pagina 8)

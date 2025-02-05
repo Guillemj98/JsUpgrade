@@ -1,4 +1,4 @@
-
+ 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 
@@ -6,5 +6,42 @@
 :root{
     /*Fuentes de la aplicación*/
     --font-primary: "Nunito", sans-serif;
+    --font-weight-light: 300;
+    --font-weight-mixed: 400;
+    --font-weight-regular: 500;
+    --font-size-xLarge:40;
+    --font-size-large:38;
+    --font-size-slarge:35;
+    --font-size-xMedium:25;
+    --font-size-medium:23;
+    --font-size-sMedium:20;
+    --font-size-small:15;
+
+
+    /* Colores de la aplicacion*/
+    --primary-color: #252525;
+    --color-fondo : #3B3B3B;
+    --color-letra:#FFFFFF; 
+    --color-letra-segunda:#CFCFCF;
+ 
+    --color-notes-fondo:#000000;
+    --color-notes-variante1:#91F48F;
+    --color-notes-variante2:#9EFFFF;
+    --color-notes-variante3:#B69CFF;
+    --color-notes-variante4:#FD99FF;
+    --color-notes-variante5:#FF9E9E;
+    --color-notes-variante6:#FFF599;
+    --color-fondo-delete:#FF0000;
+
+    --color-teclado-fondo:#3B464C; 
+    --color-letra-teclado:#D4D6D7;
+    --color-fondo-buscar:#4FB6B2;
+    --color-icono-buscar:#FFFFFF;
+
+    --color-fondo-save:#30BE71;
+    
+
+     
+     
 
 }

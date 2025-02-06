@@ -1,46 +1,55 @@
  
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+/*Estructura:
+Componentes interfaz nota-> 
+-Note_item
+-Header(nav)
+-Botones
 
+Componente interfaz edicion->
+-La caja de alerta
+-La vista entera que es lo que va recoger todo
+-
+
+
+*/
 
 :root{
-    /*Fuentes de la aplicación*/
-    --font-primary: "Nunito", sans-serif;
-    --font-weight-light: 300;
-    --font-weight-mixed: 400;
-    --font-weight-regular: 500;
-    --font-size-xLarge:40;
-    --font-size-large:38;
-    --font-size-slarge:35;
-    --font-size-xMedium:25;
-    --font-size-medium:23;
-    --font-size-sMedium:20;
-    --font-size-small:15;
-
-
-    /* Colores de la aplicacion*/
-    --primary-color: #252525;
-    --color-fondo : #3B3B3B;
-    --color-letra:#FFFFFF; 
-    --color-letra-segunda:#CFCFCF;
- 
-    --color-notes-fondo:#000000;
-    --color-notes-variante1:#91F48F;
-    --color-notes-variante2:#9EFFFF;
-    --color-notes-variante3:#B69CFF;
-    --color-notes-variante4:#FD99FF;
-    --color-notes-variante5:#FF9E9E;
-    --color-notes-variante6:#FFF599;
-    --color-fondo-delete:#FF0000;
-
-    --color-teclado-fondo:#3B464C; 
-    --color-letra-teclado:#D4D6D7;
-    --color-fondo-buscar:#4FB6B2;
-    --color-icono-buscar:#FFFFFF;
-
-    --color-fondo-save:#30BE71;
     
+    /*Colores de la aplicacion*/
+    --color-primary:#252525;
+    --color-secondary:#FFFFFF;
+    --color-terciary:#3B3B3B;
 
+    --color-danger:#FF0000;
+    --color-submit:#30BE71;
+
+    /*Fuente de la aplicacion*/
+    --fw-bold:800;
+    --fw-semibold:600;
+    --fw-regular:400;
+    --fw-thin:200;
+    --fw-light:300;
+    
+    /*Fuentes fluidas*/
+    --fs-xs: clamp(0.64rem, 0.04vi + 0.63rem, 0.67rem);
+    --fs-sm: clamp(0.8rem, 0.13vi + 0.77rem, 0.89rem);
+    --fs-base: clamp(1rem, 0.27vi + 0.95rem, 1.19rem);
+    --fs-md: clamp(1.25rem, 0.48vi + 1.15rem, 1.58rem);
+    --fs-lg: clamp(1.56rem, 0.79vi + 1.4rem, 2.11rem);
+    --fs-xl: clamp(1.95rem, 1.23vi + 1.7rem, 2.81rem);
+    --fs-xxl: clamp(2.44rem, 1.88vi + 2.06rem, 3.75rem);
+    --fs-xxxl: clamp(3.05rem, 2.79vi + 2.48rem, 5rem);
+        
+    /*Espaciado*/
+    --spacing-xxl:4rem;
+    --spacing-xl:2rem;
+    --spacing-lg:1.5rem;
+    --spacing-md:1rem;
+    --spacing-se:0.75rem;
+    --spacing-xs:0.5rem;
+    --spacing-xxs:0.25rem;
      
      
 

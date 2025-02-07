@@ -17,6 +17,7 @@ Componente interfaz edicion->
 
 :root{
     
+    --font-primary: "Nunito", sans-serif;
     /*Colores de la aplicacion*/
     --color-primary:#252525;
     --color-secondary:#FFFFFF;

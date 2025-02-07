@@ -1,0 +1,18 @@
+
+
+.note__title{
+    
+    font-weight: var(--fw-semibold);
+    font-size: var(--fs-xl);
+    color: var(--color-secondary);
+}
+.note__groupIcon{
+    display: flex;
+    gap:var(--spacing-md)
+}
+.note__container{
+    margin-top: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}

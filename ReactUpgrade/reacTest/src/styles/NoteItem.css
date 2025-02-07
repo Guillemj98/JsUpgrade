@@ -1,0 +1,19 @@
+
+.noteItem{
+    padding: 1em 1.5em;
+    background-color: red;
+    border-radius: 14px;
+}
+
+
+
+.noteItem__title{
+    color: var(--color-secondary);
+    font-size: var(--fs-md);
+    font-weight: var(--fw-semibold);
+}
+.noteItem__text{
+    color: var(--color-secondary);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-regular);
+}

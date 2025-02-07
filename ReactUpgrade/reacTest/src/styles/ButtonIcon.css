@@ -1,0 +1,17 @@
+
+
+.buttonIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-terciary);
+    border: none;
+    padding: 1em;/* 1 em equivale al tamaño del elemento que tenga el font size mas cercano*/
+    border-radius: 8px;
+    color: var(--color-secondary);
+}
+
+.buttonIcon > svg{
+    width: var(--fs-base) ;
+    height: var(--fs-base) ;
+}

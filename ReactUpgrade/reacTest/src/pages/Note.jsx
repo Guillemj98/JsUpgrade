@@ -2,12 +2,14 @@ import React from 'react'
 import ButtonIcon from '../component/ButtonIcon'
 import { FaSearch } from 'react-icons/fa'
 import { FaCircleInfo } from "react-icons/fa6";
+import { IoIosAdd } from 'react-icons/io';
 import Header from '../component/Header';
 import '../styles/Note.css'
 import NoteItem from '../component/NoteItem';
+import ImagePlaceHolder from '../component/imagePlaceHolder';
 
 export default function Note() {
-
+const data =[]
    return (
       <>
       <Header>
@@ -22,11 +24,12 @@ export default function Note() {
          </div>
       </Header>
       <div className= "note__container">
-         <NoteItem titulo={} description={}/>
-         <NoteItem/>
-         <NoteItem/>
-         <NoteItem/>
+         { data.lenght !==0 ?  <NoteItem titulo={"sdfsf"} description={"asdad"}/> : <ImagePlaceHolder image='src/assets/FondoPagina.jpg' text='Crea tu primera nota'/>}
+         
       </div>
+      <button className='note__add'>
+         <IoIosAdd/>
+      </button>
       
       </>
    )

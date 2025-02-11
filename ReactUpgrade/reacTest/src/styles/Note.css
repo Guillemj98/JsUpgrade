@@ -12,7 +12,26 @@
 }
 .note__container{
     margin-top: var(--spacing-md);
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /*Esto seria como una media query custom que me he creado para que cuando agrande la pntalla no se exitiren las notas si no que se coloquen en columnas*/
     flex-direction: column;
     gap: var(--spacing-md);
+}
+.note__add{
+    position: fixed;
+    bottom: var(--spacing-md);
+    right: var(--spacing-md);
+    box-shadow:0px 0px 8px 4px ;
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: 100%;
+    padding: .5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.note__add svg{
+    height: var(--fs-xxl);
+    width:var(--fs-xxl) ;
+    color: var(--color-secondary);
 }

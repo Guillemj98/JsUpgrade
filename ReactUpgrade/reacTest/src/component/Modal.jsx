@@ -7,10 +7,12 @@ export default function Modal(props) {
 
    return (
 
-      <div>
-      <div className="modal">
-        <div className="modal__icon">
-          <span><IoMdInformationCircle/></span>
+
+      <div className="modal-overlay">
+      <div className="modal-container">
+        <div className="modal-icon">
+          <span>ℹ️</span>
+
         </div>
         <p className="modal__text">{props.mensaje}</p>
         <div className="modal__buttons">
@@ -25,4 +27,4 @@ export default function Modal(props) {
 
 
   
-}
+} 

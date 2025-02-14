@@ -7,6 +7,7 @@ import Header from '../component/Header';
 import '../styles/Note.css'
 import NoteItem from '../component/NoteItem';
 import ImagePlaceHolder from '../component/imagePlaceHolder';
+import { Link } from 'react-router-dom';
 
 export default function Note() {
    const data = [{"id":"50158ad0-df19-45a7-b15d-c503b5585e73","titulo":"Class Trip, The (La classe de neige)","description":"sdansdjASDHAJSD10u38ujfdouh98qwehf98u20ufr082u0ru023ur","color":"Turquoise"},
@@ -20,18 +21,18 @@ export default function Note() {
       <h1 className='note_tittle'>Notes</h1>
       <div className='note_groupIcon'>
         <ButtonIcon icon={<FaSearch />}/>
-        <ButtonIcon icon={<FaInfoCircle />}/>
+        <ButtonIcon icon={<FaCircleInfo />}/>
       </div>
     </Header>
     <div className='note_contanier'>
       {data.length === 0 ?
         data.map(elem =>  <NoteItem key={elem.id}titulo={elem.titulo} description={elem.description} color={elem.color}/> )
-        : <ImagePlaceholder  image="/src/assets/charmander.jpg" 
+        : <ImagePlaceHolder  image="/src/assets/charmander.jpg" 
         text="Create your first note!"/>}
     </div>
-    <button className='note_add'>
+    <Link to="/edit" className='note_add'>
       <IoIosAdd />
-    </button>
+    </Link>
       </>
    )
 

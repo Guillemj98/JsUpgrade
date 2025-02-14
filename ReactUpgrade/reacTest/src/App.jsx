@@ -2,8 +2,9 @@ import React from 'react'
 import './App.css'
 import Note from './pages/Note';
 import ImagePlaceHolder from './component/imagePlaceHolder';
-import "./App.css"
 import Modal from './component/Modal';
+import EditNote from './pages/EditNote';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
 export default function App() {
@@ -11,12 +12,13 @@ export default function App() {
    return (
       <div className='app'>
 
-         <Note/>
-         <Modal mensaje='¿Guardar cambios?'/>
-         <Modal mensaje='¿Seguro que quieres descartar los cambios?'/>
+         <BrowserRouter>
+            <Routes>
+               <Route path='/' element={<Note/>}/>
+               <Route path='/edit' element={<EditNote/>}/>    
+            </Routes>
+         </BrowserRouter>
          
-       
-
       </div>
    )
 

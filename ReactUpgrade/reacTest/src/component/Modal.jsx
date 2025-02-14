@@ -8,16 +8,16 @@ export default function Modal(props) {
    return (
 
 
-      <div className="modal-overlay">
+    <div className="modal-overlay">
       <div className="modal-container">
         <div className="modal-icon">
-          <span>ℹ️</span>
+          <span><IoMdInformationCircle/></span>
 
         </div>
         <p className="modal__text">{props.mensaje}</p>
         <div className="modal__buttons">
-          <button onClick={props.discard} className="modal__button modal__button--red">Discard</button>
-          <button onClick={props.save} className="modal__button modal__button--green ">Save</button>
+          <button  className="modal__button modal__button--red">{props.buttonText.bTextRed}</button>
+          <button  className="modal__button modal__button--green ">{props.buttonText.bTextGreen}</button>
         </div>
       </div>
     </div>

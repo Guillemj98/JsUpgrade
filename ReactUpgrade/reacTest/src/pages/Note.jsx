@@ -1,36 +1,57 @@
-import React from 'react'
+import React, {useState} from 'react'
 import ButtonIcon from '../component/ButtonIcon'
 import { FaSearch } from 'react-icons/fa'
 import { FaCircleInfo } from "react-icons/fa6";
 import { IoIosAdd } from 'react-icons/io';
 import Header from '../component/Header';
-import '../styles/Note.css'
+import '../styles/Note.css';
 import NoteItem from '../component/NoteItem';
 import ImagePlaceHolder from '../component/imagePlaceHolder';
 import { Link } from 'react-router-dom';
+import FilterInput from '../component/FilterInput';
 
-export default function Note() {
-   const data = [{"id":"50158ad0-df19-45a7-b15d-c503b5585e73","titulo":"Class Trip, The (La classe de neige)","description":"sdansdjASDHAJSD10u38ujfdouh98qwehf98u20ufr082u0ru023ur","color":"Turquoise"},
-      {"id":"0edd520e-6d0c-4200-beaf-d34e92f08da5","titulo":"Chicks with Sticks","description":"sdansdjASDHAJSD10u38ujfdouh98qwehf98u20ufr082u0ru023ur","color":"Purple"},
-      {"id":"979029f8-7624-4e70-92c0-a4dc7f14c95a","titulo":"Easy Life, The (Il Sorpasso)","description":"sdansdjASDHAJSD10u38ujfdouh98qwehf98u20ufr082u0ru023ur","color":"Indigo"},
-      {"id":"55a1fc59-f191-46af-994a-2f6258cbec81","titulo":"From Morn to Midnight (Von morgens bis Mitternacht)","description":"sdansdjASDHAJSD10u38ujfdouh98qwehf98u20ufr082u0ru023ur","color":"Crimson"},
-      {"id":"e64fea76-8a1d-47a6-a64a-26185ba673ee","titulo":"Englishman in New York, An","description":"sdansdjASDHAJSD10u38ujfdouh98qwehf98u20ufr082u0ru023ur","color":"Turquoise"}]
+
+export default function Note(props) {
+
+  const [state, setState]= useState("list");
+  const [searchValue, setSearchValue] = useState('');
+
+  const notesFiltered = props.notes.filter((elem)=> elem.title.toLowerCase().includes(searchValue.toLowerCase()))
+
+
+  function handlerClickFilter (){
+    setState("filter")
+  }
+  function handlerClickFilterClose (){
+    setState("list")
+  }
+  function handlerChangeInput(e){
+    setSearchValue(e.target.value)
+  }
+   
    return (
       <>
       <Header>
-      <h1 className='note_tittle'>Notes</h1>
-      <div className='note_groupIcon'>
-        <ButtonIcon icon={<FaSearch />}/>
-        <ButtonIcon icon={<FaCircleInfo />}/>
-      </div>
+      {state === "list" ?
+      <>
+        <h1 className='note__title'>Notes</h1>
+        <div className='note__groupIcon'>
+          <ButtonIcon icon={<FaSearch />} onClick ={handlerClickFilter} />
+          <ButtonIcon icon={<FaCircleInfo />}/>
+        </div>
+      </>
+      :
+      <FilterInput onClick={handlerClickFilterClose} onChange={handlerChangeInput}/>
+}
     </Header>
-    <div className='note_contanier'>
-      {data.length === 0 ?
-        data.map(elem =>  <NoteItem key={elem.id}titulo={elem.titulo} description={elem.description} color={elem.color}/> )
-        : <ImagePlaceHolder  image="/src/assets/charmander.jpg" 
+
+    <div className='note__container'>
+      {props.notes.length > 0 ?
+        notesFiltered.map((elem) =>  <NoteItem key={elem.id}title={elem.title} description={elem.description} color={elem.color} date={elem.date}/> )
+        : <ImagePlaceHolder  image="/src/assets/FondoPagina.jpg" 
         text="Create your first note!"/>}
     </div>
-    <Link to="/edit" className='note_add'>
+    <Link to="/edit" className='note__add'>
       <IoIosAdd />
     </Link>
       </>

@@ -8,7 +8,7 @@ export default function ButtonIcon(props) {
   
 return(
     
-    <button onClick={props.onSmash} className='buttonIcon'> 
+    <button onClick={props.onClick} className='buttonIcon'> 
         {props.icon} 
     </button>
 )

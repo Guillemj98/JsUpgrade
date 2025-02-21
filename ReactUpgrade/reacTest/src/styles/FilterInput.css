@@ -1,0 +1,39 @@
+.filterInput{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em 1em;
+    border-radius: 12px;
+    background-color: var(--color-terciary);
+    width: 100%;
+   
+    
+
+}
+.filterInput__input{
+    background-color: var(--color-terciary);
+    border: none;
+    border-radius: 12px;
+    color: var(--color-secondary);
+    width: 100%;  
+    font-family: var(--font-primary);
+    font-weight: var(--fw-light);
+    font-size: var(--fs-base);
+}
+.filterInput__input:focus{
+    outline: none;
+}
+.filterInput__button{
+    background-color: transparent;
+    border: none;
+    color: var(--color-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: crosshair;
+
+}
+.filterInput__button svg{
+    width:var(--fs-base) ;
+    height:var(--fs-base) ;
+}

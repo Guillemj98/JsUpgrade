@@ -47,7 +47,7 @@ export default function Note(props) {
 
     <div className='note__container'>
       {props.notes.length > 0 ?
-        notesFiltered.map((elem) =>  <NoteItem key={elem.id}title={elem.title} description={elem.description} color={elem.color} date={elem.date}/> )
+        notesFiltered.map((elem) =>  <NoteItem key={elem.id} id={elem.id} title={elem.title} description={elem.description} color={elem.color} date={elem.date}/> )
         : <ImagePlaceHolder  image="/src/assets/FondoPagina.jpg" 
         text="Create your first note!"/>}
     </div>

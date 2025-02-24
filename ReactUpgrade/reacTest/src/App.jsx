@@ -18,7 +18,7 @@ export default function App() {
          <BrowserRouter>
             <Routes>
                <Route path='/' element={<Note notes ={notes}/>}/>
-               <Route path='/edit' element={<EditNote setNotes={setNotes} notes={notes}/>}/>    
+               <Route path='/edit/:id?' element={<EditNote setNotes={setNotes} notes={notes}/>}/>    
             </Routes>
          </BrowserRouter>
          
